@@ -1,4 +1,5 @@
 import React from 'react';
+import './Button.css';
 
 export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   onClick?: () => void;
@@ -14,7 +15,8 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      style={{ border: '1px solid red', ...props?.style }}
+      style={{ ...props?.style }}
+      className="button"
       onClick={onClick}
       type={type}
       {...props}
